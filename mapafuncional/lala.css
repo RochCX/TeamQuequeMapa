@@ -1,0 +1,11 @@
+path:hover{
+    stroke: black;
+    fill: red;
+}
+#tarjeta{
+    position: absolute;
+    background: red;
+    right: 100px;
+    width: 20vh;
+    height: 10vh;
+}
