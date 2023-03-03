@@ -4,8 +4,11 @@ path:hover{
 }
 #tarjeta{
     position: absolute;
-    background: red;
+    background: transparent;
     right: 100px;
-    width: 20vh;
-    height: 10vh;
+}
+
+img{
+    width: 200px;
+    height: 200px;
 }

@@ -9,7 +9,7 @@ arregloRegiones["XV"]={
         nombre:"Parque Nacional Lauca",
         nombre:"Museo Arqueologico San Miguel de Azapa"
     },
-    imagen:""
+    imagen:"../img/arica.jpg"
 }
 arregloRegiones["I"]={
     nombre: "Tarapacá",
@@ -20,7 +20,7 @@ arregloRegiones["I"]={
         {nombre: "Playa Cavancha"},
         {nombre: "Calle Baquedano"}
     ],
-    imagen:""
+    imagen:"../img/tarapaca.jpg"
 };
 
 arregloRegiones["II"]={
@@ -32,7 +32,7 @@ arregloRegiones["II"]={
         {nombre: "Barrio Histórico"},
         {nombre: "Parque Croacia"}
     ],
-    imagen:""
+    imagen:"../img/antofa.jpg"
 };
 
 arregloRegiones["III"]={
@@ -44,7 +44,7 @@ arregloRegiones["III"]={
         {"nombre": "Desierto Florido"},
         {"nombre": "Playa la virgen"}
     ],
-    imagen:""
+    imagen:"../img/atacama.jpg"
 }
 
 arregloRegiones["IV"]={
@@ -56,7 +56,7 @@ arregloRegiones["IV"]={
         {nombre: "Totoralillo"},
         {nombre: "Cruz Del Tercer Milenio"}
     ],
-    imagen:""
+    imagen:"../img/coquimbo.jpg"
 }
 
 arregloRegiones["V"]={
@@ -68,7 +68,7 @@ arregloRegiones["V"]={
         {nombre: "Cerro Concepción"},
         {nombre: "Jardín Botanico Nacional"},
     ],
-    imagen:""
+    imagen:"../img/valpo.jpg"
 }
 arregloRegiones["XIII"]={
     nombre: "Metropolitana de Santiago",
@@ -79,7 +79,7 @@ arregloRegiones["XIII"]={
         {nombre: "Cerro Santa Lucia"},
         {nombre: "Museo de la Memoria y los Derechos Humanos"}
     ],
-    imagen:""
+    imagen:"../img/santiago.jpg"
 }
 
 arregloRegiones["VI"]={
@@ -91,7 +91,7 @@ arregloRegiones["VI"]={
         {nombre: "Playa Punta de Lobos"},
         {nombre: "MontGras"}
     ],
-    imagen:""
+    imagen:"../img/ohiggins.jpg"
 }
 
 arregloRegiones["VII"]={
@@ -103,7 +103,7 @@ arregloRegiones["VII"]={
                 {nombre: "Piedra de la Iglesia"},
                 {nombre: "Río Achibueno"}
             ],
-            imagen:""
+            imagen:"../img/maule.jpg"
 }
 
 arregloRegiones["XVI"]={
@@ -115,7 +115,7 @@ arregloRegiones["XVI"]={
         {nombre: "Portezuelo"},
         {nombre: "Casa Museo Violeta Parra"}
     ],
-    imagen:""
+    imagen:"../img/nuble.jpg"
 }
 
 arregloRegiones["VIII"]={
@@ -127,7 +127,7 @@ arregloRegiones["VIII"]={
                 {nombre: "Universidad de Concepcion"},
                 {nombre: "Monitor Huáscar"}
             ],
-            imagen:""
+            imagen:"../img/biobio.jpg"
 }
 
 arregloRegiones["IX"]={
@@ -139,7 +139,7 @@ arregloRegiones["IX"]={
         {nombre: "Salto de la Princesa"},
         {nombre: "Reserva Nacional Malalcahuello - Nalcas"}
     ],
-    imagen:""
+    imagen:"../img/araucania.jpg"
 }
 
 arregloRegiones["XIV"]={
@@ -151,7 +151,7 @@ arregloRegiones["XIV"]={
         {nombre: "Mercado Fluvial de Valdivia"},
         {nombre: "Parque Oncol"}
     ],
-    imagen:""
+    imagen:"../img/los-rios.jpg"
 }
 
 arregloRegiones["X"]={
@@ -163,7 +163,7 @@ arregloRegiones["X"]={
         {nombre: "Alerce Andino Parque Nacional"},
         {nombre: "Montaña de los Cóndores"},
     ],
-    imagen:""
+    imagen:"../img/los-lagos.jpg"
 }
 
 arregloRegiones["XI"]={
@@ -175,7 +175,7 @@ arregloRegiones["XI"]={
         {nombre: "Valle Lunar"},
         {nombre: "Parque Nacional Queular"}
     ],
-    imagen:""
+    imagen:"../img/aysen.jpg"
 }
 
 arregloRegiones["XII"]={
@@ -187,7 +187,7 @@ arregloRegiones["XII"]={
         {nombre: "Nao Victoria Museo"},
         {nombre: "Lago Nordenskjold"}
     ],
-    imagen:""
+    imagen:"../img/magallanes.jpg"
 }
 
 let NumeroRegion = document.getElementById("region");
@@ -195,16 +195,17 @@ let descripciones = document.getElementById("descripcion");
 let atractivos = document.getElementById("atractivo");
 let tarjeta = document.getElementById("tarjeta");
 let color = document.getElementById("color");
+let imagen = document.getElementById("imagen")
 
 
 tarjeta.hidden=true;
 
 function IndicaRegion(elemento){
     tarjeta.hidden=false
-    console.dir(arregloRegiones[elemento.attributes.title.value].nombre);
     NumeroRegion.innerText = arregloRegiones[elemento.attributes.title.value].nombre;
-    console.dir(arregloRegiones[elemento.attributes.title.value].descripcion);
     descripciones.innerText = arregloRegiones[elemento.attributes.title.value].descripcion;
+    atractivos.innerText = arregloRegiones[elemento.attributes.title.value].atractivoTur.map(function(item){return item.nombre})
+    imagen.src=arregloRegiones[elemento.attributes.title.value].imagen
 }
 
 function ocultar(){
