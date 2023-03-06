@@ -4,11 +4,11 @@ arregloRegiones["XV"]={
     nombre :"Arica y Parinacota",
     numeroRomano:"XV",
     descripcion:"La Región de Arica y Parinacota (XV) se ubica en el extremo norte del país, a una distancia aproximada de 2.000 kilómetros de la capital de Chile. Posee una superficie de 16.873,30 kilómetros cuadrados, equivalentes al 2,2% del territorio nacional. Según el Censo 2017 la población es de 226.068 habitantes y una densidad de 13,4 habitantes por kilómetro cuadrado. Limita al norte con la República del Perú, al sur con la región de Tarapacá, al este con la República de Bolivia y al oeste con el Océano Pacífico, abarcando desde los 17° 30' hasta los 19° 13' de latitud sur aproximadamente",
-    atractivoTur:{
-        nombre:"Morro de Arica",
-        nombre:"Parque Nacional Lauca",
-        nombre:"Museo Arqueologico San Miguel de Azapa"
-    },
+    atractivoTur:[
+        {nombre:"Morro de Arica"},
+        {nombre:"Parque Nacional Lauca"},
+        {nombre:"Museo Arqueologico San Miguel de Azapa"}
+    ],
     imagen:"../img/arica.jpg"
 }
 arregloRegiones["I"]={
@@ -190,12 +190,24 @@ arregloRegiones["XII"]={
     imagen:"../img/magallanes.jpg"
 }
 
+arregloVariacion={
+    nombre: "",
+    numeroRomano: "",
+    descripcion:"",
+    atractivoTur: [
+        {nombre: ""},
+        {nombre: ""},
+        {nombre: ""}
+    ],
+    imagen:""
+}
+
 let NumeroRegion = document.getElementById("region");
 let descripciones = document.getElementById("descripcion");
 let atractivos = document.getElementById("atractivo");
 let tarjeta = document.getElementById("tarjeta");
 let color = document.getElementById("color");
-let imagen = document.getElementById("imagen")
+let imagen = document.getElementById("imagen");
 
 
 tarjeta.hidden=true;
@@ -209,7 +221,7 @@ function IndicaRegion(elemento){
     NumeroRegion.innerText = arregloRegiones[elemento.attributes.title.value].nombre;
     descripciones.innerText = arregloRegiones[elemento.attributes.title.value].descripcion;
     imagen.src=arregloRegiones[elemento.attributes.title.value].imagen;
-    atractivos.innerText = arregloRegiones[elemento.attributes.title.value].atractivoTur.map(function(item){return item.nombre})
+    atractivos.innerText = arregloRegiones[elemento.attributes.title.value].atractivoTur.map(x => x.nombre)
     
 }
 
@@ -217,4 +229,10 @@ function ocultar(){
     var element = document.getElementById("tarjeta");
     element.classList.remove("fade-in");
     element.classList.add("slide-out-bck-center");
+}
+
+let titulo = document.getElementById("titulo");
+
+function Reemplazar(){
+    arregloRegiones.XV.nombre.textContent =  titulo;
 }

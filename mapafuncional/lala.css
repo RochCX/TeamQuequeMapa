@@ -6,6 +6,11 @@ path:hover{
     position: absolute;
     background: transparent;
     right: 100px;
+    pointer-events: none;
+}
+
+path:focus{
+    fill:blue
 }
 
 img{
@@ -87,4 +92,3 @@ img{
       opacity: 0;
     }
   }
-  
