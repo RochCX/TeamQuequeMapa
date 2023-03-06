@@ -4,11 +4,11 @@ arregloRegiones["XV"]={
     nombre :"Arica y Parinacota",
     numeroRomano:"XV",
     descripcion:"La Región de Arica y Parinacota (XV) se ubica en el extremo norte del país, a una distancia aproximada de 2.000 kilómetros de la capital de Chile. Posee una superficie de 16.873,30 kilómetros cuadrados, equivalentes al 2,2% del territorio nacional. Según el Censo 2017 la población es de 226.068 habitantes y una densidad de 13,4 habitantes por kilómetro cuadrado. Limita al norte con la República del Perú, al sur con la región de Tarapacá, al este con la República de Bolivia y al oeste con el Océano Pacífico, abarcando desde los 17° 30' hasta los 19° 13' de latitud sur aproximadamente",
-    atractivoTur:{
-        nombre:"Morro de Arica",
-        nombre:"Parque Nacional Lauca",
-        nombre:"Museo Arqueologico San Miguel de Azapa"
-    },
+    atractivoTur:[
+        {nombre:"Morro de Arica"},
+        {nombre:"Parque Nacional Lauca"},
+        {nombre:"Museo Arqueologico San Miguel de Azapa"}
+    ],
     imagen:"../img/arica.jpg"
 }
 arregloRegiones["I"]={
