@@ -201,6 +201,7 @@ let imagen = document.getElementById("imagen")
 tarjeta.hidden=true;
 
 let posicionActual = "II";
+
 function IndicaRegion(elemento){
     var element = document.getElementById("tarjeta");
     posicionActual = elemento.attributes.title.value;
@@ -212,13 +213,18 @@ function IndicaRegion(elemento){
     descripciones.innerText = arregloRegiones[elemento.attributes.title.value].descripcion;
     imagen.src=arregloRegiones[elemento.attributes.title.value].imagen;
     atractivos.innerText = arregloRegiones[elemento.attributes.title.value].atractivoTur.map(x => x.nombre)
-    
+    prueba.value=arregloRegiones[elemento.attributes.title.value].nombre;
+    description.value=arregloRegiones[elemento.attributes.title.value].descripcion;
+    atract1.value=arregloRegiones[elemento.attributes.title.value].atractivoTur[0].nombre;
+    atract2.value=arregloRegiones[elemento.attributes.title.value].atractivoTur[1].nombre;
+    atract3.value=arregloRegiones[elemento.attributes.title.value].atractivoTur[2].nombre;
 }
 
 function ocultar(){
     var element = document.getElementById("tarjeta");
     element.classList.remove("fade-in");
     element.classList.add("slide-out-bck-center");
+
 }
 function abrirMod(){
     var element = document.getElementById("tarjetaMOD");
@@ -226,7 +232,19 @@ function abrirMod(){
 }
 
 let prueba= document.getElementById("Ctitulo");
+let description = document.getElementById("Cdescrip");
+let atract1 = document.getElementById("Catractivo1");
+let atract2 = document.getElementById("Catractivo2");
+let atract3 = document.getElementById("Catractivo3");
+let img = document.getElementById("Cimagen");
+
 function cambiame(){
     arregloRegiones[posicionActual].nombre = prueba.value;
-
+    // arregloRegiones[posicionActual].imagen = "../img/regiones/"+img.value+".jpg";
+    arregloRegiones[posicionActual].descripcion = description.value;
+    console.log(arregloRegiones[posicionActual].atractivoTur.map(x=> x.nombre));
+    arregloRegiones[posicionActual].atractivoTur = [{nombre:atract1.value}];
+    // arregloRegiones[posicionActual].atractivoTur = [{nombre:atract2.value}];
+    // arregloRegiones[posicionActual].atractivoTur = [{nombre:atract3.value}];
+    console.log(arregloRegiones[posicionActual].atractivoTur.map(x=> x.nombre));
 }
