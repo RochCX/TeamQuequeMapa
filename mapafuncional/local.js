@@ -121,7 +121,7 @@ arregloRegiones["XVI"]={
 arregloRegiones["VIII"]={
     nombre: "Biobío",
             numeroRomano: "VIII",
-            descripcion: "La Región del Biobío​ ​​​​ es una de las dieciséis regiones en que se divide la República de Chile. Su capital es Concepción. Ubicada en el centro del país, limita al norte con la Región de Ñuble, al este con la provincia del Neuquén en Argentina, al sur con la Región de La Araucanía y al oeste con el océano Pacífico.",
+            descripcion: "La Región del Biobío es una de las dieciséis regiones en que se divide la República de Chile. Su capital es Concepción. Ubicada en el centro del país, limita al norte con la Región de Ñuble, al este con la provincia del Neuquén en Argentina, al sur con la Región de La Araucanía y al oeste con el océano Pacífico.",
             atractivoTur: [
                 {nombre: "Parque Nacional Laguna del Laja"},
                 {nombre: "Universidad de Concepcion"},
@@ -204,8 +204,9 @@ function IndicaRegion(elemento){
     tarjeta.hidden=false
     NumeroRegion.innerText = arregloRegiones[elemento.attributes.title.value].nombre;
     descripciones.innerText = arregloRegiones[elemento.attributes.title.value].descripcion;
+    imagen.src=arregloRegiones[elemento.attributes.title.value].imagen;
     atractivos.innerText = arregloRegiones[elemento.attributes.title.value].atractivoTur.map(function(item){return item.nombre})
-    imagen.src=arregloRegiones[elemento.attributes.title.value].imagen
+    
 }
 
 function ocultar(){
