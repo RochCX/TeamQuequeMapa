@@ -227,7 +227,6 @@ function abrirMod(){
 
 let prueba= document.getElementById("Ctitulo");
 function cambiame(){
-    console.log(arregloRegiones.XV.nombre);
     arregloRegiones[posicionActual].nombre = prueba.value;
 
 }
