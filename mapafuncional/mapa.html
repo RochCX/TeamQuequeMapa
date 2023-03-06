@@ -10,6 +10,7 @@
   
 </head>
 <body>
+   <button id="modificar" class="modCard" onclick="abrirMod()">Cambiar Datos</button>
     <div id="tarjeta" class="card mt-2" style="width: 40%;">
       <img id="imagen" src="" class="card-img-top h-10" alt=""  style="object-fit: cover;">
       <div class="card-body">
@@ -18,6 +19,17 @@
         <p id="atractivo" class="card-text"></p>
       </div>
     </div>
+    <div id="tarjetaMOD" class="card mt-2 d-none" style="width: 40%;">
+      <h1>modifique datos de region</h1>
+      <input type="file" name="Inserte imagen" id="">
+      <div class="card-body">
+        <input placeholder="titulo" type="text" name="Titulo" id="Ctitulo">
+        <input placeholder="descripcion" type="text" name="descripcion" id="">
+        <input placeholder="atractivos" type="text" name="atractivos" id="">
+        <button class="actualizar" onclick="cambiame()"></button>
+      </div>
+    </div>
+
     
     <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg

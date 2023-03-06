@@ -6,6 +6,13 @@ path:hover{
     position: absolute;
     background: transparent;
     right: 100px;
+    pointer-events: none;
+}
+#modificar{
+    position: absolute;
+}
+#tarjetaMOD{
+    position: absolute;
 }
 
 img{

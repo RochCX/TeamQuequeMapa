@@ -200,8 +200,10 @@ let imagen = document.getElementById("imagen")
 
 tarjeta.hidden=true;
 
+let posicionActual = "II";
 function IndicaRegion(elemento){
     var element = document.getElementById("tarjeta");
+    posicionActual = elemento.attributes.title.value;
     tarjeta.hidden=false;
     element.classList.remove("slide-out-bck-center");
     element.classList.add("fade-in");
@@ -209,7 +211,7 @@ function IndicaRegion(elemento){
     NumeroRegion.innerText = arregloRegiones[elemento.attributes.title.value].nombre;
     descripciones.innerText = arregloRegiones[elemento.attributes.title.value].descripcion;
     imagen.src=arregloRegiones[elemento.attributes.title.value].imagen;
-    atractivos.innerText = arregloRegiones[elemento.attributes.title.value].atractivoTur.map(function(item){return item.nombre})
+    atractivos.innerText = arregloRegiones[elemento.attributes.title.value].atractivoTur.map(x => x.nombre)
     
 }
 
@@ -217,4 +219,15 @@ function ocultar(){
     var element = document.getElementById("tarjeta");
     element.classList.remove("fade-in");
     element.classList.add("slide-out-bck-center");
+}
+function abrirMod(){
+    var element = document.getElementById("tarjetaMOD");
+    element.classList.remove("d-none");
+}
+
+let prueba= document.getElementById("Ctitulo");
+function cambiame(){
+    console.log(arregloRegiones.XV.nombre);
+    arregloRegiones[posicionActual].nombre = prueba.value;
+
 }
