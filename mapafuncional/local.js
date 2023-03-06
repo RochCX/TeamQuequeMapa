@@ -201,6 +201,10 @@ let imagen = document.getElementById("imagen")
 tarjeta.hidden=true;
 
 function IndicaRegion(elemento){
+    var element = document.getElementById("tarjeta");
+    tarjeta.hidden=false;
+    element.classList.remove("slide-out-bck-center");
+    element.classList.add("fade-in");
     tarjeta.hidden=false
     NumeroRegion.innerText = arregloRegiones[elemento.attributes.title.value].nombre;
     descripciones.innerText = arregloRegiones[elemento.attributes.title.value].descripcion;
@@ -209,5 +213,7 @@ function IndicaRegion(elemento){
 }
 
 function ocultar(){
-    tarjeta.hidden=true
+    var element = document.getElementById("tarjeta");
+    element.classList.remove("fade-in");
+    element.classList.add("slide-out-bck-center");
 }
