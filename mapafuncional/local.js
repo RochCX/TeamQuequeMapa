@@ -230,6 +230,10 @@ function abrirMod(){
     var element = document.getElementById("tarjetaMOD");
     element.classList.remove("d-none");
 }
+function cerrarMod(){
+    var element = document.getElementById("tarjetaMOD");
+    element.classList.add("d-none");
+}
 
 let prueba= document.getElementById("Ctitulo");
 let description = document.getElementById("Cdescrip");

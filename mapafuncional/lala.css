@@ -5,7 +5,8 @@ path:hover{
 #tarjeta{
     position: absolute;
     background: transparent;
-    right: 100px;
+    right: 20%;
+    margin: auto;
     pointer-events: none;
 }
 #modificar{
@@ -13,6 +14,51 @@ path:hover{
 }
 #tarjetaMOD{
     position: absolute;
+    width: 20%;
+    background-color: cornflowerblue;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#tarjetaMOD h1{
+  font-size: 30px;
+  margin: auto;
+  padding-bottom: 30px;
+
+}
+svg,path{
+  float: right;
+}
+#Cimagen{
+  width: 27vw;
+  align-self: center;
+}
+.card-body{
+  align-items: center;
+}
+div#tarjetaMOD i{
+  display: flex;
+  align-self: flex-end;
+  margin: 10px;
+  
+}
+div#tarjetaMOD input{
+  margin: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+div#tarjetaMOD button{
+  background-color: darkcyan;
+  border: 1px solid cyan;
+}
+#modificar{
+  width: 200px;
+  background: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 60px;
+  font-weight: bold;
+  margin-left: 100px;
+  margin-top: 100px;
 }
 
 img{
