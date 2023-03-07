@@ -239,21 +239,17 @@ let atract3 = document.getElementById("Catractivo3");
 const input = document.getElementById("Cimagen")
 
 function cambiame(){
-    arregloRegiones[posicionActual].nombre = prueba.value;
-    arregloRegiones[posicionActual].imagen = img.value;
-    arregloRegiones[posicionActual].descripcion = description.value;
-    arregloRegiones[posicionActual].atractivoTur[0] = atract1.value;
-    arregloRegiones[posicionActual].atractivoTur[1] = atract2.value;
-    arregloRegiones[posicionActual].atractivoTur[2] = atract3.value;
-    console.log(arregloRegiones[posicionActual].atractivoTur.map(x=> x.nombre));
-}
-
-input.addEventListener("change", function() {
     const file = input.files[0];
     const url = URL.createObjectURL(file);
     const imgN = new Image();
     imgN.onload = function() {
         arregloRegiones[posicionActual].imagen=url;
 };
-imgN.src = url;
-});
+imgN.src = url;
+    arregloRegiones[posicionActual].nombre = prueba.value;
+    arregloRegiones[posicionActual].descripcion = description.value;
+    arregloRegiones[posicionActual].atractivoTur[0] = atract1.value;
+    arregloRegiones[posicionActual].atractivoTur[1] = atract2.value;
+    arregloRegiones[posicionActual].atractivoTur[2] = atract3.value;
+    console.log(arregloRegiones[posicionActual].atractivoTur.map(x=> x.nombre));
+}
